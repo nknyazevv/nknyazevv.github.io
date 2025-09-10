@@ -353,8 +353,78 @@ body {
 		position: static;
 	}
 }
+
 @media (max-width: 380px) {
-	.casino_card {
-		width: 330px;
+	.header h1 {
+		font-size: 22px;
 	}
+	.description_heading {
+		font-size: 16px;
+	}
+	.description_container-item img {
+		width: 22px;
+	}
+	.description_container-item p {
+		font-size: 16px;
+	}
+	.casino_card {
+		width: 300px;
+        height: 470px;
+		margin: 10px;
+	}
+	.casino_card-logo {
+		width: 25%;
+		height: 130px;
+	}
+	.casino_card-rating {
+		margin-top: 0;
+	}
+	.rating_scale {
+		width: 75px;
+		height: 15px;
+		margin-top: 1px;
+	}
+	.rating_value {
+		font-size: 16px;
+	}
+	.rating_text {
+		font-size: 8px;
+	}
+	.rating_text::before {
+		top: -2px;
+		left: -16px;
+		width: 13px;
+		height: 13px;
+		background-size: 13px 13px;
+	}
+    .casino_rtp {
+		margin-top: 0;
+	}
+	.casino_rtp-value {
+		margin-top: 5px;
+		color: #bdecb6;
+		text-align: center;
+		font-size: 18px;
+		font-weight: 700;
+	}
+	.benefits-text {
+		font-size: 14px;
+	}
+	.benefits-ico {
+		width: 30px;
+	}
+	.benefits-value {
+		font-size: 24px;
+	}
+	.payment_text {
+		font-size: 14px;
+	}
+    .payment_systems img {
+        width: 50px;
+    }
+    .casino_card-button {
+        padding: 15px 70px;
+        font-size: 18px;
+    }
 }
+
