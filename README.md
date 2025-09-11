@@ -11,19 +11,6 @@ MoneyPage — тестовый проект (Frontend + Backend), где реа�
 
 ---
 
-## 📂 Структура проекта
-frontend/ # HTML + CSS + Vue
-├── index.html # Витрина (Money Page)
-├── admin.html # Админка
-└── main.css # Стили
-
-backend/
-├── server.js # Сервер Express
-├── brands.json # Данные (имитация базы)
-└── package.json
-
----
-
 ## ⚡ Как работает
 ### 1. Витрина (`index.html`)
 - Загружает список брендов с backend (`/api/brands`).
