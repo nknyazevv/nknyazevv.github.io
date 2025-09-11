@@ -64,7 +64,7 @@
 				},
 				methods: {
 					async fetchBrands() {
-						const res = await fetch('http://localhost:5000/api/brands');
+						const res = await fetch('https://nknyazevv.github.io//api/brands');
 						this.brands = await res.json();
 					},
 					moveUp(index) {
@@ -82,7 +82,7 @@
 						}
 					},
 					async saveChanges() {
-						await fetch('https://moneypage-backend.onrender.com/api/brands', {
+						await fetch('https://moneypage-backend.onrender.com/api/brands/update', {
 							method: 'POST',
 							headers: { 'Content-Type': 'application/json' },
 							body: JSON.stringify(this.brands),
@@ -97,5 +97,6 @@
 		</script>
 	</body>
 </html>
+
 
 
