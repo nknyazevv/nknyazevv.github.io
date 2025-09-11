@@ -368,7 +368,7 @@ body {
 	}
 }
 
-@media (max-width: 500px) {
+@media (min-width: 500px) {
 	.header h1 {
 		font-size: 30px;
 	}
@@ -506,6 +506,7 @@ body {
 		width: 100%;
 	}
 }
+
 
 
 
