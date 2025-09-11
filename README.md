@@ -1,0 +1,52 @@
+# 🎰 MoneyPage
+
+MoneyPage — тестовый проект (Frontend + Backend), где реализована витрина онлайн-казино и админ-панель для управления карточками брендов.
+
+## 🚀 Стек технологий
+- **Frontend**: HTML, CSS, Vue.js (через CDN)
+- **Backend**: Node.js, Express, CORS
+- **Хостинг**:  
+  - Frontend — GitHub Pages  
+  - Backend — Render  
+
+---
+
+## 📂 Структура проекта
+frontend/ # HTML + CSS + Vue
+├── index.html # Витрина (Money Page)
+├── admin.html # Админка
+└── main.css # Стили
+
+backend/
+├── server.js # Сервер Express
+├── brands.json # Данные (имитация базы)
+└── package.json
+
+---
+
+## ⚡ Как работает
+### 1. Витрина (`index.html`)
+- Загружает список брендов с backend (`/api/brands`).
+- Отображает только активные бренды.
+
+### 2. Админка (`admin.html`)
+- Подгружает те же бренды с backend.
+- Можно:
+  - включать / выключать бренды,
+  - менять бонусы и количество free spins,
+  - менять порядок карточек кнопками ↑↓.
+- Кнопка «Сохранить» отправляет изменения на сервер → обновляет `brands.json`.
+
+### 3. Backend (`server.js`)
+- API `GET /api/brands` → возвращает список брендов.  
+- API `POST /api/brands/update` → сохраняет изменения в `brands.json`.  
+
+---
+
+🌍 Деплой
+
+Frontend: GitHub Pages
+Backend: Render
+
+⚠️ Иногда Render «засыпает» после простоя (бесплатный тариф).
+В таком случае первый запрос может занять 20–30 секунд. Просто подожди — сервер «просыпается» и дальше работает быстрее.
