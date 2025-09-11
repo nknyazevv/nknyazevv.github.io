@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="author" content="Nikita Knyazev" />
+		<title>MoneyPage | Admin Panel</title>
+		<link rel="stylesheet" href="./main.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+			rel="stylesheet"
+		/>
+		<script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			<!-- Header -->
+			<header class="header">
+				<h1>Admin Panel</h1>
+			</header>
+
+			<!-- List of Brands -->
+			<section class="admin_cards">
+				<div
+					class="admin_cards-item"
+					v-for="(brand, index) in brands"
+					:key="brand.id"
+				>
+					<input type="checkbox" v-model="brand.active" />
+					<span>{{ brand.name }}</span>
+					<label>
+						Bonus:
+						<input type="number" v-model="brand.bonus" />
+					</label>
+					<label>
+						Free Spins:
+						<input type="number" v-model="brand.spins" />
+					</label>
+					<div class="buttons_group">
+						<button class="button button-move" @click="moveUp(index)">↑</button>
+						<button class="button button-move" @click="moveDown(index)">
+							↓
+						</button>
+					</div>
+				</div>
+			</section>
+
+			<button class="button button-save" @click="saveChanges">💾 Save</button>
+
+			<!-- Footer -->
+			<footer class="footer footer-admin"></footer>
+		</div>
+
+		<script>
+			const { createApp } = Vue;
+
+			createApp({
+				data() {
+					return {
+						brands: [],
+					};
+				},
+				methods: {
+					async fetchBrands() {
+						const res = await fetch('http://localhost:5000/api/brands');
+						this.brands = await res.json();
+					},
+					moveUp(index) {
+						if (index > 0) {
+							const temp = this.brands[index];
+							this.brands.splice(index, 1);
+							this.brands.splice(index - 1, 0, temp);
+						}
+					},
+					moveDown(index) {
+						if (index < this.brands.length - 1) {
+							const temp = this.brands[index];
+							this.brands.splice(index, 1);
+							this.brands.splice(index + 1, 0, temp);
+						}
+					},
+					async saveChanges() {
+						await fetch('http://localhost:5000/api/brands/update', {
+							method: 'POST',
+							headers: { 'Content-Type': 'application/json' },
+							body: JSON.stringify(this.brands),
+						});
+						alert('Modifications saved. ✅');
+					},
+				},
+				mounted() {
+					this.fetchBrands();
+				},
+			}).mount('#app');
+		</script>
+	</body>
+</html>
