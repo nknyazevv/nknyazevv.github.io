@@ -232,8 +232,9 @@ body {
 	margin: 10px 10px;
 }
 .casino_card-button {
-	position: static;
-	display: block;
+	position: absolute;
+	bottom: 20px;
+	left: 35%;
 	width: 100%;
 	max-width: 320px;
 	margin: 30px auto 0;
@@ -411,7 +412,7 @@ body {
 		position: static;
 	}
 }
-@media (max-width: 380px) {
+@media (max-width: 415px) {
 	.header h1 {
 		font-size: 22px;
 	}
@@ -425,7 +426,7 @@ body {
 		font-size: 16px;
 	}
 	.casino_card {
-		width: 100%;
+		width: 90%;
 		height: auto;
 		padding-bottom: 20px;
 	}
@@ -480,7 +481,7 @@ body {
 		width: 50px;
 	}
 	.casino_card-button {
-		width: 100%;
+		width: 90%;
 		max-width: none;
 		font-size: 18px;
 	}
@@ -510,6 +511,7 @@ body {
 		width: 100%;
 	}
 }
+
 
 
 
