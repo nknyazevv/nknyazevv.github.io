@@ -1,0 +1,34 @@
+[
+	{
+		"id": 1,
+		"name": "Vegas Now",
+		"logo": "./images/Vega-Casino.png",
+		"rating": 5,
+		"rtp": 97.9,
+		"bonus": "8000",
+		"spins": 500,
+		"payments": [
+			"./images/CashtoCode-ico.png",
+			"./images/Mifinity-ico.png",
+			"./images/Binance-ico.png"
+		],
+		"link": "#",
+		"active": true
+	},
+	{
+		"id": 2,
+		"name": "Kinbet",
+		"logo": "./images/Kinbet-Casino.png",
+		"rating": 4.9,
+		"rtp": 98.0,
+		"bonus": "4500",
+		"spins": 350,
+		"payments": [
+			"./images/Neteler-ico.png",
+			"./images/CashtoCode-ico.png",
+			"./images/Jeton-ico.png"
+		],
+		"link": "#",
+		"active": true
+	}
+]
