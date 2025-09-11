@@ -80,7 +80,7 @@ body {
 	display: flex;
 	width: 100%;
 	max-width: 480px;
-	height: auto;
+	height: 380px;
 	margin: 20px auto;
 	border: 2px solid green;
 	border-radius: 8px;
@@ -234,7 +234,6 @@ body {
 .casino_card-button {
 	position: absolute;
 	bottom: 20px;
-	left: 35%;
 	width: 100%;
 	max-width: 320px;
 	margin: 30px auto 0;
@@ -330,8 +329,7 @@ body {
 	font-size: 14px;
 }
 .button-save {
-	margin-top: 30px;
-	margin-left: 20px;
+	margin: 20px 20px 40px;
 	background: green;
 	color: white;
 	font-weight: 700;
@@ -511,6 +509,7 @@ body {
 		width: 100%;
 	}
 }
+
 
 
 
