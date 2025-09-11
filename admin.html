@@ -82,7 +82,7 @@
 						}
 					},
 					async saveChanges() {
-						await fetch('https://moneypage-backend.onrender.com/api/brands/update', {
+						await fetch('https://moneypage-backend.onrender.com/api/brands', {
 							method: 'POST',
 							headers: { 'Content-Type': 'application/json' },
 							body: JSON.stringify(this.brands),
@@ -97,4 +97,5 @@
 		</script>
 	</body>
 </html>
+
 
