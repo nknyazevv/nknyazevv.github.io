@@ -80,7 +80,7 @@ body {
 	display: flex;
 	width: 480px;
 	height: 380px;
-	margin: 20px auto;
+	gap: 20px;
 	border: 2px solid green;
 	border-radius: 8px;
 	box-shadow: 0 0 6px 2px green;
@@ -506,5 +506,6 @@ body {
 		width: 100%;
 	}
 }
+
 
 
