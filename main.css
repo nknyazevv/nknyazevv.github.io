@@ -425,7 +425,6 @@ body {
 	.casino_card {
 		width: 100%;
 		height: 470px;
-		margin: 10px;
 	}
 	.casino_card-logo {
 		width: 25%;
@@ -507,4 +506,5 @@ body {
 		width: 100%;
 	}
 }
+
 
