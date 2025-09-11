@@ -199,10 +199,11 @@
 					};
 				},
 				async mounted() {
-					const res = await fetch('http://localhost:5000/api/brands');
+					const res = await fetch('https://moneypage-backend.onrender.com/api/brands');
 					this.brands = await res.json();
 				},
 			}).mount('#app');
 		</script>
 	</body>
 </html>
+
