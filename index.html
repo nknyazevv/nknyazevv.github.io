@@ -95,24 +95,9 @@
 							<div class="casino_card-payment">
 								<p class="payment_text">payment systems</p>
 								<div class="payment_systems">
-									<a href="#"
-										><img
-											src="./images/CashtoCode-ico.png"
-											alt="Cash to Code"
-											class="payment_systems-item"
-									/></a>
-									<a href="#"
-										><img
-											src="./images/Mifinity-ico.png"
-											alt="Mifinity"
-											class="payment_systems-item"
-									/></a>
-									<a href="#"
-										><img
-											src="./images/Binance-ico.png"
-											alt="Binance"
-											class="payment_systems-item"
-									/></a>
+									<a v-for="(pay, i) in brand.payments" :key="i" href="#">
+  										<img :src="pay" alt="Payment" class="payment_systems-item" />
+									</a>
 								</div>
 							</div>
 							<a :href="brand.link" class="casino_card-button">play now</a>
@@ -206,4 +191,5 @@
 		</script>
 	</body>
 </html>
+
 
