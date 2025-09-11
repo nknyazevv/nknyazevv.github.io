@@ -175,22 +175,41 @@
 		</div>
 
 		<script>
-			const { createApp } = Vue;
+  			const { createApp } = Vue;
 
-			createApp({
-				data() {
-					return {
-						brands: [],
-					};
-				},
-				async mounted() {
-					const res = await fetch('https://moneypage-backend.onrender.com/api/brands');
-					this.brands = await res.json();
-				},
-			}).mount('#app');
+  			createApp({
+    			data() {
+      				return {
+        				brands: [],
+      				};
+    			},
+    			methods: {
+      
+      				formatBonus(value) {
+        			let num = Number(value);
+
+        			if (num >= 1000) {
+          				return (num / 1000).toFixed(1);
+        			}
+    				return num.toString();
+      				},
+    			},
+    			async mounted() {
+      				try {
+        				const res = await fetch("https://money-page-backend.onrender.com/api/brands");
+        				const data = await res.json();
+        				console.log("Загруженные бренды:", data);
+        				this.brands = data;
+      				} catch (err) {
+        				console.error("Ошибка загрузки брендов:", err);
+      				}
+    			},
+  			}).mount("#app");
 		</script>
+
 	</body>
 </html>
+
 
 
 
