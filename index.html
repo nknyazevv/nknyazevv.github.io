@@ -196,7 +196,7 @@
     			},
     			async mounted() {
       				try {
-        				const res = await fetch("https://money-page-backend.onrender.com/api/brands");
+        				const res = await fetch("https://moneypage-backend.onrender.com/api/brands");
         				const data = await res.json();
         				console.log("Загруженные бренды:", data);
         				this.brands = data;
@@ -209,6 +209,7 @@
 
 	</body>
 </html>
+
 
 
 
