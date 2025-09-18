@@ -25,32 +25,25 @@ body {
 	margin: 0 auto;
 }
 
-/* Header */
-.header h1 {
-	padding: 20px;
-	border-bottom: 2px solid green;
-	background-color: rgba(0, 0, 0, 0.5);
-	backdrop-filter: blur(5px);
-	font-weight: 700;
-	font-size: 48px;
-	text-align: center;
-}
-
 /* Description */
 .description {
-	padding: 20px;
-	margin-top: 40px;
+	padding: 20px 20px 30px;
+	margin-top: 70px;
 	background-color: rgba(0, 0, 0, 0.5);
 	backdrop-filter: blur(5px);
 }
 .description_heading {
-	color: yellow;
-	font-weight: 400;
-	font-size: 18px;
+	font-weight: 900;
+	font-size: 38px;
 	text-align: center;
 }
+.description_text {
+	margin-top: 30px;
+	font-size: 18px;
+	line-height: 1.5;
+}
 .description_container {
-	margin-top: 20px;
+	margin-top: 40px;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
@@ -71,9 +64,9 @@ body {
 
 /* Casino Cards */
 .casino {
-	margin-top: 20px;
+	margin-top: 30px;
 	display: flex;
-	flex-wrap: wrap;
+	flex-direction: column;
 }
 .casino_card {
 	position: relative;
@@ -81,11 +74,29 @@ body {
 	width: 100%;
 	max-width: 480px;
 	height: 380px;
-	margin: 20px auto;
+	margin: 20px auto 30px;
 	border: 2px solid green;
 	border-radius: 8px;
 	box-shadow: 0 0 6px 2px green;
 	background-color: rgba(0, 0, 0, 0.7);
+}
+.casino_card:first-child {
+	margin: 40px auto;
+	border: 2px solid #e9a105;
+	box-shadow: 0 0 20px 10px #e9a105;
+}
+.casino_card:first-child::before {
+	content: 'TOP';
+	position: absolute;
+	top: -2px;
+	left: -3px;
+	padding: 8px 18px;
+	font-weight: 900;
+	font-size: 14px;
+	color: #000;
+	background-color: #e9a105;
+	border-radius: 0 0 8px 0;
+	box-shadow: 0 0 6px 2px #e9a105;
 }
 .casino_card-left {
 	width: 30%;
@@ -202,9 +213,6 @@ body {
 	content: '$';
 	padding-right: 8px;
 }
-.benefits_bonus > .benefits-value::after {
-	content: 'K';
-}
 .benefits_spins > .benefits-value::after {
 	content: 'FS';
 	padding-left: 10px;
@@ -246,6 +254,11 @@ body {
 	border-radius: 8px;
 	box-shadow: 0 0 6px 2px green;
 	cursor: pointer;
+	transition: 0.2s ease;
+}
+.casino_card-button:hover {
+	background-color: #00cc00;
+	box-shadow: 0 0 10px 5px #00cc00;
 }
 
 /* Guarantee */
@@ -349,9 +362,6 @@ body {
 
 /* Adaptive Media Queries */
 @media (max-width: 1024px) {
-	.header h1 {
-		font-size: 40px;
-	}
 	.casino {
 		flex-direction: column;
 	}
@@ -361,18 +371,12 @@ body {
 }
 
 @media (min-width: 768px) {
-	.header h1 {
-		font-size: 36px;
-	}
 	.guarantee_sponsors {
 		justify-content: space-between;
 	}
 }
 
 @media (max-width: 500px) {
-	.header h1 {
-		font-size: 30px;
-	}
 	.description_container {
 		justify-content: center;
 	}
@@ -411,9 +415,6 @@ body {
 	}
 }
 @media (max-width: 415px) {
-	.header h1 {
-		font-size: 22px;
-	}
 	.description_heading {
 		font-size: 16px;
 	}
@@ -479,8 +480,8 @@ body {
 		width: 50px;
 	}
 	.casino_card-button {
-		width: 90%;
-		max-width: none;
+        width: 90%;
+        max-width: none;
 		font-size: 18px;
 	}
 }
@@ -509,12 +510,3 @@ body {
 		width: 100%;
 	}
 }
-
-
-
-
-
-
-
-
-
