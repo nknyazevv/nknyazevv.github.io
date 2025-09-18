@@ -187,12 +187,7 @@
       
       				formatBonus(value) {
         			let num = Number(value);
-
-        			if (num >= 1000) {
-          				return (num / 1000).toFixed(1);
-        			}
     				return num.toString();
-      				},
     			},
     			async mounted() {
       				try {
@@ -209,6 +204,7 @@
 
 	</body>
 </html>
+
 
 
 
